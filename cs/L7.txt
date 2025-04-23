@@ -26,8 +26,8 @@ for idx = 1:length(pf_values)
     theta = theta_lagging(idx);
     
     for ii = 1:21
-        v_phase(ii) = sqrt(e_a^2 - (x_s * i_a(ii) * sin(theta))^2) ...
-                    - (x_s * i_a(ii) * cos(theta));
+        v_phase(ii) = sqrt(e_a^2 - (x_s * i_a(ii) * cos(theta))^2) ...
+                    - (x_s * i_a(ii) * sin(theta));
     end
     
     v_t = v_phase * sqrt(3);
@@ -41,8 +41,8 @@ for idx = 1:length(pf_values)
     theta = theta_leading(idx);
     
     for ii = 1:21
-        v_phase(ii) = sqrt(e_a^2 - (x_s * i_a(ii) * sin(theta))^2) ...
-                    - (x_s * i_a(ii) * cos(theta));
+        v_phase(ii) = sqrt(e_a^2 - (x_s * i_a(ii) * cos(theta))^2) ...
+                    + (x_s * i_a(ii) * sin(theta));
     end
     
     v_t = v_phase * sqrt(3);
